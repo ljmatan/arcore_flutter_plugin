@@ -50,6 +50,7 @@ class ArCoreView(val activity: Activity, context: Context, messenger: BinaryMess
 
     init {
         methodChannel.setMethodCallHandler(this)
+        ArSceneView(context).setCameraStreamRenderPriority(0)
         arSceneView = ArSceneView(context)
         // Set up a tap gesture detector.
         gestureDetector = GestureDetector(
